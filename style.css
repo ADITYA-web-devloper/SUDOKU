@@ -1,0 +1,48 @@
+/* General Body Styles */
+body {
+    -webkit-tap-highlight-color: transparent;
+    background-color: #f8fafc;
+    background-image: radial-gradient(#e0e7ff 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+/* Custom Borders for Sudoku Grid */
+.cell { 
+    border-right: 1px solid #e2e8f0; 
+    border-bottom: 1px solid #e2e8f0; 
+}
+
+/* Vertical Box Divider */
+.cell:nth-child(3n) { 
+    border-right: 2px solid #475569; 
+} 
+
+/* End of row - remove right border */
+.cell:nth-child(9n) { 
+    border-right: none; 
+} 
+
+/* Animations */
+.pop-in { 
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; 
+}
+
+@keyframes popIn { 
+    from { opacity: 0; transform: scale(0.9); } 
+    to { opacity: 1; transform: scale(1); } 
+}
+
+.fade-up { 
+    animation: fadeUp 0.4s ease-out forwards; 
+}
+
+@keyframes fadeUp { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Hide Scrollbar */
+::-webkit-scrollbar { 
+    width: 0px; 
+    background: transparent; 
+}
